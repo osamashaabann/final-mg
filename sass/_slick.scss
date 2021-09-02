@@ -1,0 +1,31 @@
+.slider{
+    max-width: 80vw;
+    margin:  2.5rem auto;
+}
+
+
+.slider .slide{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.slider-div .slick-arrow{
+    
+    display: none !important;
+}
+
+.slider-div .slick-prev,
+.slider-div .slick-next{
+
+    display: none !important;
+
+}
+
+
+
+
+
+
