@@ -247,7 +247,7 @@ nav.nav-wrapper .drop-menu:hover .dropdown {
     background-color: #131313;
     z-index: 30;
     display: block;
-    width: 40rem;
+    width: 30rem;
     max-width: 100%;
     padding: 0px 10px;
     transform: translate3d(-100%, 0, 0);
@@ -1076,7 +1076,7 @@ footer {
 
 .site-content {
   min-height: 100vh;
-  margin-bottom: 1rem; }
+  margin-bottom: 6rem; }
 
 .site-container {
   width: 90%;
@@ -1108,12 +1108,12 @@ footer {
         direction: rtl;
         text-align: center; } }
 .site__img {
-  width: 40%;
-  height: 50rem; }
-  .site__img img {
-    object-fit: fill;
-    width: 100%;
-    height: 100%; }
+  width: 35%;
+  height: 40rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem; }
   @media only screen and (max-width: 768px) {
     .site__img {
       width: 65%;
@@ -1138,5 +1138,10 @@ footer {
   font-size: 1.5rem;
   font-weight: 300;
   color: #00619c; }
+  .site__text span {
+    text-align: left; }
+
+.values {
+  background-position: right; }
 
 /*# sourceMappingURL=main.css.map */
