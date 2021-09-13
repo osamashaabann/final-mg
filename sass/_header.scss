@@ -76,8 +76,8 @@ body.scroll header.sticky .logo-blue{
 .logo .logo-blue,
 .logo .logo-white{
     width: 24.5rem;
-
 }
+
 
 nav.nav-wrapper ul{
     display: flex;
@@ -210,6 +210,7 @@ nav.nav-wrapper .drop-menu:hover .dropdown {
     }
 }
 
+
 @media only screen and (max-width: 900px) {
     .social{
         left: 0rem;
@@ -218,7 +219,7 @@ nav.nav-wrapper .drop-menu:hover .dropdown {
 
 @media only screen and (max-width: 768px) {
     .social{
-        top: 14rem;
+        top: 12rem;
         left: -8rem;
     }
 }

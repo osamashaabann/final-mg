@@ -70,17 +70,42 @@ main{
 }
 
 .item:nth-child(1) {
-    background: linear-gradient(rgba(#00619c,0.86),rgba(#00619c,0.86)), url(../img/pic-1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: linear-gradient(rgba(#00619c,0.86),rgba(#00619c,0.86));
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .item:nth-child(2) {
-    background: linear-gradient(rgba(#00619c,0.86),rgba(#00619c,0.86)), url(../img/pic-3.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    position: relative;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: linear-gradient(rgba(#00619c,0.86),rgba(#00619c,0.86));
+        width: 100%;
+        height: 100%;
+    }
 }
 
 
@@ -109,6 +134,23 @@ main{
     background-image: none;
 }
 
+.carousel-control .glyphicon-chevron-left,
+ .carousel-control .glyphicon-chevron-right,
+  .carousel-control .icon-prev,
+   .carousel-control .icon-next{
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    z-index: 10;
+    transition: all 0.3s ease;
+    &:hover{
+        border-radius: 3px;
+        background-color: transparent !important;
+        color: #222;
+    }
+}
+
 @media screen and (min-width: 768px){
 .carousel-control .glyphicon-chevron-left,
  .carousel-control .glyphicon-chevron-right,
@@ -122,12 +164,13 @@ main{
     transition: all 0.3s ease;
     &:hover{
         border-radius: 3px;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: transparent !important;
         color: #222;
     }
 }
 
 }
+
 
 
 

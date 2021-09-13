@@ -183,7 +183,7 @@ nav.nav-wrapper .drop-menu:hover .dropdown {
     left: 0rem; } }
 @media only screen and (max-width: 768px) {
   .social {
-    top: 14rem;
+    top: 12rem;
     left: -8rem; } }
 @media only screen and (max-width: 600px) {
   .social {
@@ -334,16 +334,36 @@ main {
   width: 100%; }
 
 .item:nth-child(1) {
-  background: linear-gradient(rgba(0, 97, 156, 0.86), rgba(0, 97, 156, 0.86)), url(../img/pic-1.jpg);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  position: relative; }
+  .item:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 97, 156, 0.86), rgba(0, 97, 156, 0.86));
+    width: 100%;
+    height: 100%; }
 
 .item:nth-child(2) {
-  background: linear-gradient(rgba(0, 97, 156, 0.86), rgba(0, 97, 156, 0.86)), url(../img/pic-3.jpg);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  position: relative; }
+  .item:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 97, 156, 0.86), rgba(0, 97, 156, 0.86));
+    width: 100%;
+    height: 100%; }
 
 .carousel-control {
   position: absolute;
@@ -364,6 +384,24 @@ main {
   width: 30px;
   background-image: none; }
 
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  z-index: 10;
+  transition: all 0.3s ease; }
+  .carousel-control .glyphicon-chevron-left:hover,
+  .carousel-control .glyphicon-chevron-right:hover,
+  .carousel-control .icon-prev:hover,
+  .carousel-control .icon-next:hover {
+    border-radius: 3px;
+    background-color: transparent !important;
+    color: #222; }
+
 @media screen and (min-width: 768px) {
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .glyphicon-chevron-right,
@@ -380,7 +418,7 @@ main {
     .carousel-control .icon-prev:hover,
     .carousel-control .icon-next:hover {
       border-radius: 3px;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: transparent !important;
       color: #222; } }
 @media only screen and (max-width: 768px) {
   main {
@@ -496,13 +534,17 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
-  margin: 0 4rem; }
+  flex-direction: column;
+  height: 45rem;
+  margin: 3rem;
+  box-shadow: 1rem 1px 14px rgba(0, 0, 0, 0.2); }
   .project__img {
     width: 100%;
-    grid-row: 1 / -1;
-    grid-column: 1 / -1;
-    z-index: 1; }
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 38rem; }
   .project__btn {
     color: #000;
     background-color: #fff;
@@ -514,8 +556,35 @@ main {
     font-size: 1.5rem;
     transition: all 0.2s;
     font-weight: 100;
-    width: 100%; }
+    width: 100%;
+    height: 7rem; }
 
+@media only screen and (max-width: 990px) {
+  .projects {
+    height: 45rem; }
+    .projects .project {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; } }
+@media only screen and (max-width: 768px) {
+  .project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40rem; }
+    .project__img {
+      height: 100%; } }
+@media only screen and (max-width: 505px) {
+  .project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 33rem; }
+    .project__img {
+      height: 100%; } }
 .projects .slick-prev,
 .projects .slick-next {
   display: block !important;
@@ -560,14 +629,18 @@ main {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.contcat-form-title {
+  z-index: 5; }
+
 .contcat-form-title h2 {
   color: #fff;
   margin: 0 auto;
-  margin-top: 20rem; }
+  margin-top: 20rem;
+  z-index: 5; }
 
 form.contact-form {
+  position: relative;
   margin: 5rem auto;
-  background: linear-gradient(rgba(0, 97, 156, 0.85), rgba(0, 62, 100, 0.95)), url(../img/contact.jpg);
   max-width: 70%;
   border-radius: 5px;
   height: 100vh;
@@ -578,9 +651,21 @@ form.contact-form {
   justify-content: center;
   text-align: center;
   flex-direction: column; }
+  form.contact-form::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 97, 156, 0.86), rgba(0, 62, 100, 0.95));
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
 
 .invalid {
-  border: 1px solid red; }
+  border: 1px solid red;
+  z-index: 5; }
 
 .contact-input {
   display: block;
@@ -591,7 +676,8 @@ form.contact-form {
   border: none;
   border-radius: 2px;
   outline: none;
-  transition: all .1s ease; }
+  transition: all .1s ease;
+  z-index: 5; }
   @media only screen and (max-width: 56.25em) {
     .contact-input {
       width: 50rem; } }
@@ -610,7 +696,8 @@ form.contact-form {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  z-index: 5; }
   .form-control:last-child {
     min-height: 20rem;
     margin: 0;
@@ -621,10 +708,12 @@ form.contact-form {
   font-size: 1.6rem;
   font-weight: 100;
   margin-top: 1rem;
-  display: block; }
+  display: block;
+  z-index: 5; }
 
 .hide {
-  opacity: 0; }
+  opacity: 0;
+  z-index: 5; }
 
 .contact-message {
   border-radius: 5px;
@@ -632,7 +721,8 @@ form.contact-form {
   padding: 1rem;
   font-size: 1.8rem;
   width: 30vw;
-  height: 100%; }
+  height: 100%;
+  z-index: 5; }
 
 button.contact-button {
   text-decoration: none;
@@ -645,13 +735,15 @@ button.contact-button {
   color: #00619c;
   border: none;
   cursor: pointer;
-  margin: 5rem 0; }
+  margin: 5rem 0;
+  z-index: 5; }
 
 form .form-group {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; }
+  flex-direction: column;
+  z-index: 5; }
   form .form-group:not(:last-child) {
     margin: 50px 0; }
 
@@ -807,11 +899,17 @@ footer {
   overflow: hidden; }
   .home__img {
     width: 100%;
-    grid-row: 1 / 2;
+    grid-row: 1 / 8;
     grid-column: 1 / -1;
-    z-index: 1; }
+    z-index: 1;
+    background-color: red;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%; }
   .home__name {
-    grid-row: 1 / 2;
+    grid-row: 1 / 8;
     grid-column: 1 / -1;
     justify-self: center;
     align-self: end;
@@ -1045,7 +1143,7 @@ footer {
   100% {
     transform: scale(0); } }
 .contact {
-  background: linear-gradient(rgba(0, 97, 156, 0.7), rgba(0, 97, 156, 0.7)), url(../../../img/pic-about.jpg);
+  position: relative;
   height: 100% !important;
   background-size: cover;
   background-position: center;
@@ -1054,13 +1152,26 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column; }
+  .contact::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 97, 156, 0.7), rgba(0, 97, 156, 0.7));
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
+  .contact__box {
+    z-index: 5; }
   .contact__title {
     font-size: 6rem;
     font-weight: bold;
     color: #fff; }
 
 .about {
-  background: linear-gradient(rgba(0, 97, 156, 0.7), rgba(0, 97, 156, 0.7)), url(../../img/pic-about.jpg);
+  position: relative;
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -1069,10 +1180,24 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column; }
+  .about::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 97, 156, 0.86), rgba(0, 97, 156, 0.86));
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
+  .about__box {
+    z-index: 5; }
   .about__title {
     font-size: 6rem;
     font-weight: bold;
-    color: #fff; }
+    color: #fff;
+    z-index: 5; }
 
 .site-content {
   min-height: 100vh;
@@ -1083,7 +1208,8 @@ footer {
   margin: 0 auto; }
 
 .site__box {
-  text-align: center; }
+  text-align: center;
+  z-index: 5; }
 .site__heading {
   font-size: 3.9rem;
   color: #00619c;

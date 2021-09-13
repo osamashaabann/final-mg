@@ -1,5 +1,5 @@
 .about {
-  background: linear-gradient(rgba(0, 97, 156, 0.7), rgba(0, 97, 156, 0.7)), url(../../img/pic-about.jpg);
+  position: relative;
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -8,10 +8,24 @@
   justify-content: center;
   align-items: center;
   flex-direction: column; }
+  .about::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 97, 156, 0.86), rgba(0, 97, 156, 0.86));
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
+  .about__box {
+    z-index: 5; }
   .about__title {
     font-size: 6rem;
     font-weight: bold;
-    color: #fff; }
+    color: #fff;
+    z-index: 5; }
 
 .site-content {
   min-height: 100vh;
@@ -22,7 +36,8 @@
   margin: 0 auto; }
 
 .site__box {
-  text-align: center; }
+  text-align: center;
+  z-index: 5; }
 .site__heading {
   font-size: 3.9rem;
   color: #00619c;
