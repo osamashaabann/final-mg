@@ -90,13 +90,12 @@
         }
     }
 
-    &__img{
+    &__img-container{
         width: 35%;
         height: 40rem;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
         border-radius: 1rem;
+        position: relative;
+        overflow: hidden;
         
         @media only screen and (max-width: 768px){
             width: 65%;
@@ -112,6 +111,18 @@
         
     }
 
+
+    &__img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     
 
     &__info{

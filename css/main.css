@@ -537,7 +537,8 @@ main {
   flex-direction: column;
   height: 45rem;
   margin: 3rem;
-  box-shadow: 1rem 1px 14px rgba(0, 0, 0, 0.2); }
+  box-shadow: 1rem 1px 14px rgba(0, 0, 0, 0.2);
+  overflow: hidden; }
   .project__img {
     width: 100%;
     height: 100%;
@@ -545,19 +546,33 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     height: 38rem; }
+  .project__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    width: 100%; }
   .project__btn {
+    width: 100%;
+    height: 100%;
     color: #000;
     background-color: #fff;
     text-transform: uppercase;
+    text-decoration: none;
     border: none;
-    padding: 1.8rem 1.6rem;
-    border-radius: 0%;
+    padding: 1.8rem;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     transition: all 0.2s;
-    font-weight: 100;
-    width: 100%;
-    height: 7rem; }
+    font-weight: 100; }
+    .project__btn:visited, .project__btn:link {
+      text-decoration: none; }
+    .project__btn:hover, .project__btn:active {
+      text-decoration: none; }
+    .project__btn span {
+      transition: all ease .3s; }
+    .project__btn:hover span {
+      margin-right: 1rem; }
 
 @media only screen and (max-width: 990px) {
   .projects {
@@ -575,7 +590,9 @@ main {
     flex-direction: column;
     height: 40rem; }
     .project__img {
-      height: 100%; } }
+      height: 100%; }
+    .project__button {
+      width: 100%; } }
 @media only screen and (max-width: 505px) {
   .project {
     display: flex;
@@ -584,7 +601,9 @@ main {
     flex-direction: column;
     height: 33rem; }
     .project__img {
-      height: 100%; } }
+      height: 100%; }
+    .project__button {
+      width: 100%; } }
 .projects .slick-prev,
 .projects .slick-next {
   display: block !important;
@@ -646,6 +665,7 @@ form.contact-form {
   height: 100vh;
   padding-top: 35rem;
   padding-bottom: 50rem;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1233,21 +1253,29 @@ footer {
       .site__item:nth-child(odd) {
         direction: rtl;
         text-align: center; } }
-.site__img {
+.site__img-container {
   width: 35%;
   height: 40rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 1rem; }
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden; }
   @media only screen and (max-width: 768px) {
-    .site__img {
+    .site__img-container {
       width: 65%;
       height: 40rem; } }
   @media only screen and (max-width: 643px) {
-    .site__img {
+    .site__img-container {
       width: 80%;
       height: 40rem; } }
+.site__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 .site__info {
   width: 50%; }
   @media only screen and (max-width: 480px) {
