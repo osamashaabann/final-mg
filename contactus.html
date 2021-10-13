@@ -63,13 +63,13 @@
                     <a href="index.html"><img class="logo-blue" src="img/MG Logo/MG Logo-b.png" alt="white-logo"></a>
                 </div>
                 <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="home-text">Home</a></li>
 
                     <li class="drop-menu">
-                        <a href="about.html">About Us</a>
+                        <a href="about.html" class="aboutus-text">About Us</a>
                     </li>
                     <li class="drop-menu">
-                        <a href="projects.html">Projects <i class="fas fa-chevron-down"></i></a>
+                        <a href="projects.html"><span class="projects-text">Projects</span> <i class="fas fa-chevron-down"></i></a>
 
                         <ul class="dropdown">
                             <li><a href="#">All</a></li>
@@ -78,7 +78,7 @@
                             <li><a href="#">Coastal</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="contactus.html" class="contactus-text">Contact Us</a></li>
                 </ul>
 
             
@@ -90,10 +90,12 @@
 
         <div id="contact" class="contact">
             <div class="contact__box">
-                <h1 class="contact__title">Contact Us</h1>
+                <h1 class="contact__title contact-heading">Contact Us</h1>
             </div>
         </div>
     </main>
+
+    
 
     <!-- Form -->
     <section class="contact-form-container">
@@ -152,14 +154,14 @@
       <div class="footer-cols">
         <ul>
             <li><p class="list-heading">Site Map</p></li>
-            <li><a href="index.html"> Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="index.html" class="home-text"> Home</a></li>
+            <li><a href="about.html" class="aboutus-text">About Us</a></li>
+            <li><a href="projects.html" class="projects-text">Projects</a></li>
+            <li><a href="contactus.html" class="contactus-text">Contact Us</a></li>
         </ul>
 
         <ul>
-            <li><p class="list-heading">Follow Us</p></li>
+            <li><p class="list-heading footer-follow">Follow Us</p></li>
             <li>
                 <ul class="social-list">
                     <li>
@@ -167,7 +169,7 @@
                     </li>
                     <li>
                         <a href="https://www.instagram.com/mg_real_estate_egypt/"><i class="fab fa-instagram"></i></a>
-                      </li>
+                    </li>
                     <li>
                         <a href="https://www.youtube.com/channel/UCSoOiOq-Scme-D5bNsIxSOw"><i class="fab fa-youtube"></i></a>
                     </li>
@@ -180,12 +182,14 @@
         </ul>
 
         <ul>
-            <li><p class="list-heading">Contact Us</p></li>
+            <li><p class="list-heading footer-contact">Contact Us</p></li>
             <li>
                 <p><a href="tel:+2001016444994" target="_blank"><i class="fas fa-phone-alt"></i> +201016444994</a></p>
             </li>
             <li>
-                <p class="location"><i class="fas fa-map-marked-alt"></i> Mansoura, Al Mashaya Elsoflia Front of Gzeret Al Ward Club, Gate 1
+                <p class="location"><i class="fas fa-map-marked-alt"></i> <span class="location-text">
+                    Mansoura, Al Mashaya Elsoflia Front of Gzeret Al Ward Club, Gate 1
+                </span>
                 </p>
             </li>
             <li>
@@ -195,7 +199,7 @@
         </ul>
 
         <ul>
-          <li><p class="list-heading">Newsletter</p></li>
+          <li><p class="list-heading footer-news">Newsletter</p></li>
 
           <li>
               <form action="#" class="subscribe__form">
@@ -205,7 +209,7 @@
                 </div>
                 <div class="subscribe__box">
                     <div class="subscribe__group">
-                        <button class="subscrib-btn btn--green">Subscribe &rarr;</button>
+                        <button class="subscrib-btn btn--green"><span class="footer-subscribe">Subscribe</span> &rarr;</button>
                     </div>
                 </div>
               </form>
@@ -213,7 +217,17 @@
         </ul>
       </div>
 
-      <p class="copyright-text">All rights reserved to MG Real Estate Egypt ©️ 2021</p>
+
+      <div class="wrapper-footer">
+        <p class="copyright-text">All rights reserved to MG Real Estate Egypt ©️ 2021</p>
+        <!-- Langauge Buttons -->
+        <div class="test">
+            <button class="lang-btns arabic">العربية</button>
+            <button class="lang-btns english">English</button>
+        </div>
+    <!-- Langauge Buttons -->
+    </div>
+
 
 
 
@@ -222,6 +236,8 @@
     </footer>
 
 
+
+    <script src="js/contactUsLanguage.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
