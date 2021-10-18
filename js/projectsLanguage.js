@@ -13,8 +13,14 @@ class Translate{
   
     translate(language){
 
+        let callingText = document.querySelector(".calling-text");
+
 
         // NAV HEADER items
+
+        let nav = document.querySelectorAll(".nav-wrapper");
+
+
         let allArray = document.querySelectorAll('.all-text');
         let residentialArray = document.querySelectorAll('.residential-text');
         let coastalArray = document.querySelectorAll('.coastal-text');
@@ -33,8 +39,100 @@ class Translate{
         let palaceHouseHeading = document.querySelectorAll('.palace-house-heading');
         let familyApartmentHeading = document.querySelectorAll('.family-apartment-heading');
 
-        
+        // FOOTER Variables
+        let copyrightText = document.querySelector('.copyright-text');
+        let footerEmail = document.querySelector(".footer-email");
 
+
+        // ALL PROJECTS COUNTRIES NAME 
+        let usaText = document.querySelectorAll('.usa');
+        let canadaText = document.querySelectorAll('.canada');
+        let ukText = document.querySelectorAll('.uk');
+        let italyText = document.querySelectorAll('.italy');
+        let portugalText = document.querySelectorAll('.portugal');
+        let germanyText = document.querySelectorAll('.germany');
+
+        let area = document.querySelectorAll('.project-area');
+        let meter = document.querySelectorAll('.meter');
+        let sup = document.querySelectorAll('.sup');
+
+        area.forEach(i => {
+            if (language == "arabic"){
+                i.classList.add("arabic-style");
+            } else if (language == "english"){
+                i.classList.remove("arabic-style");
+            } 
+        });
+        meter.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML ='متر';
+            } else if (language == "english"){
+                i.innerHTML = "m";
+            } 
+        });
+        sup.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML ='2';
+            } else if (language == "english"){
+                i.innerHTML = "2";
+            } 
+        });
+
+
+        usaText.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML ='أمريكا';
+            } else if (language == "english"){
+                i.innerHTML = "USA";
+            } 
+        });
+        canadaText.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML ='كندا';
+            } else if (language == "english"){
+                i.innerHTML = "Canada";
+            } 
+        });
+        ukText.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML ='بريطانيا';
+            } else if (language == "english"){
+                i.innerHTML = "UK";
+            } 
+        });
+        portugalText.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML ='البرتغال';
+            } else if (language == "english"){
+                i.innerHTML = "Portugal";
+            } 
+        });
+        germanyText.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML ='ألمانيا';
+            } else if (language == "english"){
+                i.innerHTML = "Germany";
+            } 
+        });
+        italyText.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML ='إيطاليا';
+            } else if (language == "english"){
+                i.innerHTML = "Italy";
+            } 
+        });
+
+
+
+        // NAV BAR
+
+        nav.forEach(i => {
+            if (language == "arabic"){
+                i.classList.add("arabic-style");
+            } else if (language == "english"){
+                i.classList.remove("arabic-style");
+            } 
+        });
 
         allArray.forEach(i => {
             if (language == "arabic"){
@@ -68,7 +166,7 @@ class Translate{
         // All The PROJECT SECTION 
         projectsButton.forEach(i => {
             if (language == "arabic"){
-                i.innerHTML = "تواصل مع المالك";
+                i.innerHTML = "تواصل معنا";
             } else if (language == "english"){
                 i.innerHTML = "Contract Realtor";
             } 
@@ -135,6 +233,9 @@ class Translate{
 
         // Other styles for the Projects page
         if (language == 'arabic'){
+
+            callingText.innerHTML = 'تواصل معنا';
+
             projectsHeading.innerHTML = 'المشاريع';
 
             // FOOTER SECTION
@@ -143,7 +244,7 @@ class Translate{
             document.querySelector('.list-heading').innerHTML = 'خريطة الموقع';
             
             document.querySelector('.home-text').innerHTML      = 'الرئيسية';
-            document.querySelector('.aboutus-text').innerHTML   = 'عنا';
+            document.querySelector('.aboutus-text').innerHTML   = 'عن الشركة';
             document.querySelector('.projects-text').innerHTML  = 'المشاريع';
             document.querySelector('.contactus-text').innerHTML = 'تواصل معنا';
 
@@ -153,7 +254,14 @@ class Translate{
             document.querySelector('.footer-news').innerHTML = 'آخر الأخبار';
             document.querySelector('.footer-subscribe').innerHTML = 'اشترك الآن';
 
+            footerEmail.placeholder = 'البريد الإلكتروني';
+            copyrightText.innerHTML = 'جميع الحقوق محفوظة لدى شركة إم جي ©️ 2021 ';
+
+
         } else if (language == 'english'){
+
+            callingText.innerHTML = 'Call Us';
+
             projectsHeading.innerHTML = 'Projects';
 
             // FOOTER SECTION
@@ -171,6 +279,10 @@ class Translate{
             document.querySelector('.location-text').innerHTML ='Mansoura, Al Mashaya Elsoflia Front of Gzeret Al Ward Club, Gate 1';
             document.querySelector('.footer-news').innerHTML ='newsletter';
             document.querySelector('.footer-subscribe').innerHTML ='Subscribe';
+
+            copyrightText.innerHTML = 'All rights reserved to MG Real Estate Egypt ©️ 2021';
+            footerEmail.placeholder = 'email';
+
 
         }
 

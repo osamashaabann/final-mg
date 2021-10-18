@@ -103,6 +103,10 @@ nav.nav-wrapper ul li a{
     position: relative;
 }
 
+.dropdown-arabic{
+    text-align: right;
+}
+
 nav.nav-wrapper .drop-menu .dropdown {
     position: absolute;
     top: 5.5rem;
@@ -203,9 +207,41 @@ nav.nav-wrapper .drop-menu:hover .dropdown {
 }
 
 
+.social-test{
+    right: 2rem !important;
+    top: 13.5rem !important;
+    left: unset !important;
+}
+
+@media only screen and (min-width: 1200px) {
+    .social{
+        left: 0rem;
+    }
+    .social-test{
+        right: 5.5rem !important;
+        top: 9rem !important;
+        left: unset !important;
+    }
+    .arabic-carousel-direction{
+        top: 13rem !important;
+        right: 27rem !important;
+        left: unset !important;
+    }
+}
+
+
 @media only screen and (max-width: 1200px) {
     .social{
         left: 0rem;
+    }
+    .social-test{
+        right: 1rem !important;
+        top: 6rem !important;
+        left: unset !important;
+    }
+    .arabic-carousel-direction{
+        right: 20rem !important;
+        left: unset !important;
     }
 }
 
@@ -214,12 +250,32 @@ nav.nav-wrapper .drop-menu:hover .dropdown {
     .social{
         left: 0rem;
     }
+    .social-test{
+        right: 0rem !important;
+        top: 6rem !important;
+        left: unset !important;
+    }
+    .arabic-carousel-direction{
+        right: 20rem !important;
+        left: unset !important;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .social{
         top: 12rem;
         left: -8rem;
+    }
+
+    .social-test{
+        height: 350px !important;
+        right: -2rem !important;
+        top: 17rem !important;
+        left: unset !important;
+    }
+    .arabic-carousel-direction{
+        right: 20rem !important;
+        left: unset !important;
     }
 }
 
@@ -228,7 +284,49 @@ nav.nav-wrapper .drop-menu:hover .dropdown {
         top: 11rem;
         left: -120px;
     }
+
+    .social-test{
+        height: 230px !important;
+        right: -2rem !important;
+        top: 21.4rem !important;
+        left: unset !important;
+    }
+
+    .arabic-carousel-direction{
+        right: 22rem !important;
+        left: unset !important;
+    }
 }
+
+@media only screen and (max-width: 450px) {
+    .social-test{
+        height: 230px !important;
+        right: -13rem !important;
+        top: 27.4rem !important;
+        left: unset !important;
+    }
+
+    .arabic-carousel-direction{
+        right: 12rem !important;
+        left: unset !important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .social-test{
+        height: 230px !important;
+        right: -13rem !important;
+        top: 22.4rem !important;
+        left: unset !important;
+    }
+
+    .arabic-carousel-direction{
+        right: 12rem !important;
+        left: unset !important;
+    }
+}
+
+
 
 @media only screen and (max-width: 768px) {
 

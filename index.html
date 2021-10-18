@@ -32,9 +32,9 @@
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
 
     <div class="calling popup"onclick="myFunction()">
-        <div class="calling__call-us">
+        <div class="calling__call-us calling-icon">
             <i class="fas fa-comments comments"></i>
-            <p class="calling__text">Call Us</p>
+            <p class="calling__text calling-text">Call Us</p>
         </div>
         <div class="calling__links" id="myPopup">
 
@@ -60,6 +60,7 @@
                     <a href="index.html"><img class="logo-white" src="img/MG Logo/MG Logo-white.png" alt="white-logo"></a>
                     <a href="index.html"><img class="logo-blue" src="img/MG Logo/MG Logo-b.png" alt="white-logo"></a>
                 </div>
+
                 <ul class="menu">
                     <li><a href="index.html" class="home-text">Home</a></li>
 
@@ -69,11 +70,11 @@
                     <li class="drop-menu">
                         <a href="projects.html"><span class="projects-text">Projects</span> <i class="fas fa-chevron-down"></i></a>
 
-                        <ul class="dropdown">
-                            <li><a href="#" class="all-text">All</a></li>
-                            <li><a href="#" class="Residensial-text">Residensial</a></li>
-                            <li><a href="#" class="Commercial-text">Commercial</a></li>
-                            <li><a href="#" class="Coastal-text">Coastal</a></li>
+                        <ul class="dropdown dropdown-arabic">
+                            <li><a href="#" class="all-dropdown">All</a></li>
+                            <li><a href="#" class="residential-dropdown">Residensial</a></li>
+                            <li><a href="#" class="commercial-dropdown">Commercial</a></li>
+                            <li><a href="#" class="coastal-dropdown">Coastal</a></li>
                         </ul>
                     </li>
                     <li><a href="contactus.html" class="contactus-text">Contact Us</a></li>
@@ -109,7 +110,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active" style="background-image: url(img/pic-1.jpg);">  
-                    <div class="carousel-caption">
+                    <div class="carousel-caption arabic-style">
                         <h3 class="animate__animated animate__fadeInLeft"><span class="first-carousel-text-1">Your Destination</span> <br><span class="first-carousel-text-2">For Luxury</span> <br><span class="first-carousel-text-3">Life</span></h3>
                     </div>
                 </div>
@@ -279,21 +280,21 @@
 
         <div class="form-group">
             <div class="form-control">
-                <input name="name" class="contact-input" placeholder="First and Last Name" />
+                <input name="name" class="contact-input contact-form-name" placeholder="First and Last Name" />
                 <div class="error hide">Name is required</div>
             </div>
           
       
             
                 <div class="form-control">
-                    <input name="email" class="contact-input" placeholder="e.g. your_email@example.com"> 
+                    <input name="email" class="contact-input contact-form-email" placeholder="e.g. your_email@example.com"> 
                     <div class="error hide">Email is invalid</div>
                 </div>
             
 
             
                 <div class="form-control">
-                    <input type="number" value="" name="phone" class="contact-input no-arrow" placeholder="Phone" id="Mobile"/>
+                    <input type="number" value="" name="phone" class="contact-input no-arrow contact-form-phone" placeholder="Phone" id="Mobile"/>
                     <div class="error hide">Phone is invalid</div>
                 </div>
             
@@ -301,7 +302,7 @@
 
             
                 <div class="form-control">
-                    <textarea name="message" class="contact-message" placeholder="Message"></textarea>
+                    <textarea name="message" class="contact-message contact-form-message" placeholder="Message"></textarea>
                     <div class="error hide">Message is required</div>
                 </div>
             </div>
@@ -375,7 +376,7 @@
           <li>
               <form action="#" class="subscribe__form">
                 <div class="subscribe__group">
-                    <input type="email" class="subscribe__input" placeholder="email" id="email" required>
+                    <input type="email" class="subscribe__input footer-email" placeholder="email" id="email" required>
                     <label for="password" class="subscribe__label">email</label>
                 </div>
                 <div class="subscribe__box">
@@ -390,12 +391,13 @@
 
     <div class="wrapper-footer">
         <p class="copyright-text">All rights reserved to MG Real Estate Egypt ©️ 2021</p>
+
         <!-- Langauge Buttons -->
         <div class="test">
-            <button class="lang-btns arabic">العربية</button>
-            <button class="lang-btns english">English</button>
+            <button class="lang-btns arabic" value="arabic">العربية</button>
+            <button class="lang-btns english" value="english">English</button>
         </div>
-    <!-- Langauge Buttons -->
+        <!-- Langauge Buttons -->
     </div>
 
       

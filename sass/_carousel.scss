@@ -11,6 +11,8 @@ main{
 .carousel-fade{
     height: 100%;
     width: 100%;
+    overflow: hidden;
+    
 }
 
 .carousel-fade .carousel-inner .item {
@@ -274,7 +276,7 @@ main{
         left: 41%;
     }
 }
-
+// ==============================================================================================================
 
 .carousel .carousel-caption{
     position: absolute;
@@ -288,3 +290,4 @@ main{
         text-shadow: 1px 1px 10px #222;
     }
 }
+

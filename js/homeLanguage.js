@@ -1,5 +1,7 @@
 class Translate{
     constructor(){
+
+
         document.querySelector(".arabic").addEventListener("click", () =>{
             this.translate("arabic");
         });
@@ -7,24 +9,125 @@ class Translate{
         document.querySelector(".english").addEventListener("click", () =>{
             this.translate("english");
         });
-  
+
         this.translate(localStorage.getItem("language"));
 
-    }
+    
+
+}
   
     translate(language){
+
+
+        let callingText = document.querySelector(".calling-text");
+
+        let nav = document.querySelectorAll(".nav-wrapper");
 
         let homeArray = document.querySelectorAll('.home-text');
         let aboutusArray = document.querySelectorAll('.aboutus-text');
         let projectsArray = document.querySelectorAll('.projects-text');
         let contactusArray = document.querySelectorAll('.contactus-text');
-        
+
+        // The DROPDOWN Menu Items
+        let dropdownMenu = document.querySelectorAll(".dropdown");
+        let allDropdown = document.querySelectorAll('.all-dropdown');
+        let residentialDropdown = document.querySelectorAll('.residential-dropdown');
+        let coastalDropdown = document.querySelectorAll('.coastal-dropdown');
+        let commercialDropdown = document.querySelectorAll('.commercial-dropdown');
+        // The DROPDOWN Menu Items
 
         let residentialArray = document.querySelectorAll('.residential');
         let coastalArray = document.querySelectorAll('.coastal');
         let commercialArray = document.querySelectorAll('.commercial');
 
+        let social = document.querySelector(".social");
 
+        // FOOTER VARIABLES  
+        let copyrightText = document.querySelector('.copyright-text');
+        let footerEmail = document.querySelector(".footer-email");
+
+    
+        // The Carousel Caption 
+        let carouselCaption = document.querySelectorAll(".carousel .carousel-caption");
+
+        // CONTACT FORM ALL VARIABLES
+        let contactFormName = document.querySelector('.contact-form-name');
+        let contactFormEmail = document.querySelector('.contact-form-email');
+        let contactFormPhone = document.querySelector('.contact-form-phone');
+        let contactFormMessage = document.querySelector('.contact-form-message');
+
+
+
+        carouselCaption.forEach(i => {
+            if (language == "arabic"){
+                i.classList.add("arabic-carousel-direction");
+            } else if (language == "english"){
+                i.classList.remove("arabic-carousel-direction");
+            } 
+        });
+
+        nav.forEach(i => {
+            if (language == "arabic"){
+                i.classList.add("arabic-style");
+            } else if (language == "english"){
+                i.classList.remove("arabic-style");
+            } 
+        });
+
+        // The Social Line and Tha Icons 
+        if (language == 'arabic'){
+                social.classList.add("social-test");
+                console.log("test is on");
+                
+            } else if (language == "english"){
+                        social.classList.remove("social-test");
+                    console.log("test is off");
+
+            }
+        // The Social Line and Tha Icons 
+
+    
+
+        // THE NAV ITEMS
+        dropdownMenu.forEach(i => {
+            if (language == "arabic"){
+                i.classList.add('dropdown-arabic');
+            } else if (language == "english"){
+                i.classList.remove('dropdown-arabic');
+            } 
+        });
+        allDropdown.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML = "جيمع المشاريع";
+            } else if (language == "english"){
+                i.innerHTML = "All";
+            } 
+        });
+        residentialDropdown.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML = "سكني";
+            } else if (language == "english"){
+                i.innerHTML = "Residential";
+            } 
+        });
+        commercialDropdown.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML = "تجاري";
+            } else if (language == "english"){
+                i.innerHTML = "Commercial";
+            }  
+        });
+        coastalDropdown.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML = "ساحلي";
+            } else if (language == "english"){
+                i.innerHTML = "Coastal";
+            } 
+        });
+
+        
+
+        
         homeArray.forEach(i => {
             if (language == "arabic"){
                 i.innerHTML = "الرئيسية";
@@ -34,7 +137,7 @@ class Translate{
         });
         aboutusArray.forEach(i => {
             if (language == "arabic"){
-                i.innerHTML = "عنا";
+                i.innerHTML = "عن الشركة";
             } else if (language == "english"){
                 i.innerHTML = "About Us";
             } 
@@ -81,6 +184,10 @@ class Translate{
 
         if (language == "arabic"){
 
+            callingText.innerHTML = 'تواصل معنا';
+            
+
+
             document.querySelector(".contact-form").classList.add("arabic-style");
             document.querySelector(".footer-wrapper").classList.add("arabic-style");
 
@@ -107,9 +214,22 @@ class Translate{
             document.querySelector('.footer-subscribe').innerHTML = 'اشترك الآن';
             
 
+            footerEmail.placeholder = 'البريد الإلكتروني';
+            copyrightText.innerHTML = 'جميع الحقوق محفوظة لدى شركة إم جي ©️ 2021 ';
+
+
+            contactFormName.placeholder = 'الإسم الأول و الأخير';
+            contactFormEmail.placeholder = 'البريد الإلكتروني';
+            contactFormPhone.placeholder = 'رقم الهاتف';
+            contactFormMessage.placeholder = 'رسالة';
+            
+
         }
 
         else if (language == "english"){
+
+            callingText.innerHTML = 'Call Us';
+
 
             document.querySelector(".contact-form").classList.remove("arabic-style");
             document.querySelector(".footer-wrapper").classList.remove("arabic-style");
@@ -134,6 +254,13 @@ class Translate{
             document.querySelector('.footer-news').innerHTML ='newsletter';
             document.querySelector('.footer-subscribe').innerHTML ='Subscribe';
             
+            copyrightText.innerHTML = 'All rights reserved to MG Real Estate Egypt ©️ 2021';
+            footerEmail.placeholder = 'email';
+
+            contactFormName.placeholder = 'First and Last Name';
+            contactFormEmail.placeholder = 'e.g. your_email@example.com';
+            contactFormPhone.placeholder = 'Phone';
+            contactFormMessage.placeholder = 'Message';
             
         }
 
@@ -144,6 +271,3 @@ class Translate{
   
   onload = new Translate();
 
-
-console.log(document.querySelectorAll('.home-text'));
-console.log(document.querySelector('.menu').innerHTML.includes("Home"));

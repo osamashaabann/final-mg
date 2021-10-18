@@ -19,6 +19,20 @@ body{
 
 .arabic-style{
     direction: rtl;
+    text-align: right;
+}
+
+.arabic-carousel-direction{
+    text-align: right !important;
+}
+
+.arabic-direction{
+    direction: rtl !important;
+}
+
+.arabic-social-direction{
+    right: 10rem !important;
+    left: unset !important;
 }
 
 // Thsi is the Language style
@@ -74,18 +88,23 @@ $bp-x-small: 25em; //400px => 400px/16px
     html{
         font-size: 55%;
     }
+    
 }
 
 @media only screen and (max-width: $bp-medium) {
     html{
         font-size: 49%;
     }
+
 }
 
 @media only screen and (max-width: 424px) {
     html{
         font-size: 42%;
     }
+
 }
+
+
 
 

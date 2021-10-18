@@ -14,11 +14,26 @@ class Translate{
   
     translate(language){
 
+        let callingText = document.querySelector(".calling-text");
+
+
         // NAV HEADER items
+
+        let nav = document.querySelectorAll(".nav-wrapper");
+
+
         let homeArray       =  document.querySelectorAll('.home-text');
         let aboutusArray    =  document.querySelectorAll('.aboutus-text');
         let projectsArray   =  document.querySelectorAll('.projects-text');
         let contactusArray  =  document.querySelectorAll('.contactus-text');
+
+        // The DROPDOWN Menu Items
+        let dropdownMenu = document.querySelectorAll(".dropdown");
+        let allDropdown = document.querySelectorAll('.all-dropdown');
+        let residentialDropdown = document.querySelectorAll('.residential-dropdown');
+        let coastalDropdown = document.querySelectorAll('.coastal-dropdown');
+        let commercialDropdown = document.querySelectorAll('.commercial-dropdown');
+        // The DROPDOWN Menu Items
         
         // About-us page texts variables 
         let aboutUsHeading  =  document.querySelector(".aboutus-title");
@@ -39,6 +54,20 @@ class Translate{
         let ourTeamText     =  document.querySelector(".our-team-text");
         let ourTeamContent  =  document.querySelector(".our-team-content");
 
+        let copyrightText = document.querySelector('.copyright-text');
+        let footerEmail = document.querySelector(".footer-email");
+
+
+        // NAV BAR
+
+        nav.forEach(i => {
+            if (language == "arabic"){
+                i.classList.add("arabic-style");
+            } else if (language == "english"){
+                i.classList.remove("arabic-style");
+            } 
+        });
+
 
         homeArray.forEach(i => {
             if (language == "arabic"){
@@ -49,7 +78,7 @@ class Translate{
         });
         aboutusArray.forEach(i => {
             if (language == "arabic"){
-                i.innerHTML = "عنا";
+                i.innerHTML = "عن الشركة";
             } else if (language == "english"){
                 i.innerHTML = "About Us";
             } 
@@ -69,46 +98,88 @@ class Translate{
             } 
         });
 
+        // THE NAV ITEMS
+        dropdownMenu.forEach(i => {
+            if (language == "arabic"){
+                i.classList.add('dropdown-arabic');
+            } else if (language == "english"){
+                i.classList.remove('dropdown-arabic');
+            } 
+        });
+        allDropdown.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML = "جيمع المشاريع";
+            } else if (language == "english"){
+                i.innerHTML = "All";
+            } 
+        });
+        residentialDropdown.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML = "سكني";
+            } else if (language == "english"){
+                i.innerHTML = "Residential";
+            } 
+        });
+        commercialDropdown.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML = "تجاري";
+            } else if (language == "english"){
+                i.innerHTML = "Commercial";
+            }  
+        });
+        coastalDropdown.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML = "ساحلي";
+            } else if (language == "english"){
+                i.innerHTML = "Coastal";
+            } 
+        });
+
 
         if (language == 'arabic'){
-            aboutUsHeading.innerHTML = 'عن MG';
-            aboutUsHeading.classList.add('arabic-style');
+            callingText.innerHTML = 'تواصل معنا';
+
+
+            aboutUsHeading.innerHTML = 'عن الشركة';
 
             overviewText.innerHTML = 'نظرة عامة';
 
             // ABOUT MG SECTION
-            aboutMgText.innerHTML = 'نظرة عن MG';
+            aboutMgText.innerHTML = 'عن الشركة';
             aboutMgText.classList.add('arabic-style');
             aboutMgContent.innerHTML = 
-                                                                    `بدأ كل شيء كحلم وخطة على الورق. أصبحت إم جي العقارية شركة تسويق رائدة منذ عام 2018. منذ بداية الشركة كانت مع بداية الطفرة العمرانية الجديدة التي شهدها سوق العقارات في مصر مع إنشاء مدن الجيل الرابع الجديدة التي تحتوي على العديد من الفرص الاستثمارية الواعدة ، وسرعان ما حولت الشركة نفسها إلى علامة تجارية كاملة معروفة بتفردها ومساعدة عملائها على اتخاذ القرار المناسب للاستثمار والإسكان في ظل وجود العديد من الفرص في السوق العقاري ، بالاعتماد على مجموعة من الطاقات الشابة المتخصصة في كل مجال ، حيث يستفيد عميل شركتنا من الاستشارات الهندسية والاقتصادية والقانونية ، من خلال فريقنا المتخصص وباستخدام أحدث طرق التحليل المبتكرة لمقارنة العرض`;
+                                                            `بدأ كل شيء كحلم وخطة على الورق. أصبحت  إم جي للتسويق العقاري شركة رائدة في مجال التسويق منذ عام 2018.
+                                                            حيث ان بداية الشركة كانت مع بداية الطفرة العمرانية الجديدة التي يشهدها السوق العقارية في مصر بإنشاء مدن الجيل الرابع الجديدة التي تحتوي على العديد من الفرص الاستثمارية الواعدة ، وسرعان ما حولت الشركة نفسها إلى علامة تجارية كاملة معروفة بتفردها و مساعدتها لعملاءها على اتخاذ القرار المناسب للاستثمار والسكن في ظل وجود العديد من الفرص بالسوق العقارية وذلك بالإعتماد على مجموعة من الطاقات الشابه المتخصصة  كلٍ في مجاله ، حيث يستفيد عميل شركتنا من الإستشارة العقارية و الهندسية و الاقتصادية والقانونية ، من خلال فريقنا المتخصص وبإستخدام إحدث اساليب التحليل المبتكرة للمقارنة بين المعروض.`;
             aboutMgContent.classList.add('arabic-style');
 
             // VISION SECTION
-            visionText.innerHTML = 'رؤيتنا';
+            visionText.innerHTML = 'رؤيتُنا';
             visionText.classList.add('arabic-style');
             visionContent.innerHTML = 
-                                                                    `إم جي العقارية مصر عازمة على إعادة تعريف مفهوم الاستشارات العقارية في المنطقة. من خلال توفير حلول عقارية مبتكرة تستجيب لديناميكيات السوق اليوم ، ومن خلال الاستمرار في التركيز على ما يحتاجه عملاؤنا حقًا ، نجحنا في تغيير المفاهيم المشتركة وفي سد الفجوة بين الخدمات العقارية المقدمة بشكل شائع وتحقيق أفضل استخدام ممكن للاستثمارات. "إم جي العقارية مصر تبدأ حقبة جديدة من خدمات الاستشارات العقارية التي تخلق معايير جديدة وتفتح آفاقًا جديدة"`;
+                                                                    `تهدف ام جي الى إعادة صياغة مفهوم الاستشارات العقارية في مصر. من خلال تقديم حلول عقارية مبتكرة وعملية تستجيب لمتغيرات السوق اليوم ، وذلك من خلال الاستمرار في التركيز على ما يحتاجه عملاؤنا حقًا و سد الفجوة بين الخدمات العقارية المقدمة وتحقيق أفضل استخدام ممكن من الاستثمارات.
+                                                                    باختصار ، " ام جي تبدأ حقبة جديدة من خدمات الاستشارات العقارية الشاملة التي تخلق معايير جديدة وتفتح آفاقًا جديدة ".`;
             visionContent.classList.add('arabic-style');
 
             // MISSION SECTION
             missionText.innerHTML = 'مهمتنا';
             missionText.classList.add('arabic-style');
             missionContent.innerHTML = 
-                                                                    `هو تقديم أداء فائق وتحقيق أهداف التسويق وأهداف المبيعات للمطور مقابل جميع احتياجات العملاء. تدرك شركتنا مستوى أهمية قطاع العقارات في الاقتصاد المصري وتأثيره على مجتمعنا علاوة على ذلك ، فإن التزامنا هو تلبية متطلبات عملائنا المباشرين. رضا العملاء هو على رأس أولوياتنا.`;
+                                                                    `تقديم أداء فائق وتحقيق أهداف التسويق وأهداف المبيعات للمطور مقابل جميع احتياجات العملاء. تدرك شركتنا مستوى أهمية قطاع العقارات في الاقتصاد المصري وتأثيره على مجتمعنا. علاوة على ذلك ، علينا أن نُلبي متطلبات عملائنا المباشرين. ليس فقط التزامنا بتوفير أفضل العقارات وتقديم خدمات عالية الجودة ، بل إن إرضاء العملاء هو أولويتنا القصوى.`;
             missionContent.classList.add('arabic-style');
 
             // VALUES SECTION
             valuesText.innerHTML = 'قيمنا';
             valuesText.classList.add('arabic-style');
             valuesContent.innerHTML = 
-                                                                    `تكمن قوة شركتنا في التجربة من البداية إلى النهاية حيث نسعى دائمًا لتقديم تجربة فريدة لعملائنا المختلفين وتكوين علاقة مميزة مبنية على مصداقية وثقة شركائنا الناجحين`;
+                                                                    `تكمن قوة شركتنا في التجربة من البداية الى النهاية حيث اننا نسعى دائمًا الى تقديم تجربة فريدة
+                                                                    لعملائنا المختلفين وتكوين علاقة متميزة تُبنى على المصداقية والثقة لشركاء نجاحنا.`;
             valuesContent.classList.add('arabic-style');
 
             // OUR TEAM SECTION
             ourTeamText.innerHTML = 'فريقنا';
             ourTeamText.classList.add('arabic-style');
             ourTeamContent.innerHTML = 
-                                                                    `نحن نؤمن بطاقات الشباب التي تجعل المستحيل يحدث. لدينا فريق من الكوادر الشابة على درجة عالية من التعليم ومتنوع في تجاربهم الخاصة. يتم اختيارهم بناءً على مواهبهم ومعرفتهم بسوق العقارات في مصر حتى نتمكن من تقديم تجربة لإنجاز مهمتنا.`;
+                                                                    `نحن نؤمن بالطاقات الشبابية التي يمكن أن تصنع المستحيل ، ففريقنا يتكون من مجموعة من الكوادر الشابه على درجة عالية من التعليم والتنوع في تجاربهم ذات الصلة ، حيث  يتم اختيارهم بناءًا على مواهبهم ومعرفتهم بسوق العقارات في مصر حتى نتمكن من تقديم تجربة فريدة لعملائنا`;
             ourTeamContent.classList.add('arabic-style');
 
             
@@ -122,12 +193,17 @@ class Translate{
             document.querySelector('.footer-news').innerHTML = 'آخر الأخبار';
             document.querySelector('.footer-subscribe').innerHTML = 'اشترك الآن';
 
+            footerEmail.placeholder = 'البريد الإلكتروني';
+            copyrightText.innerHTML = 'جميع الحقوق محفوظة لدى شركة إم جي ©️ 2021 ';
+
 
         } 
         
         else if (language == 'english'){
+
+            callingText.innerHTML = 'Call Us';
+
             aboutUsHeading.innerHTML = 'About Us';
-            aboutUsHeading.classList.remove('arabic-style');
 
             overviewText.innerHTML = 'Overview';
 
@@ -178,6 +254,9 @@ class Translate{
             document.querySelector('.location-text').innerHTML ='Mansoura, Al Mashaya Elsoflia Front of Gzeret Al Ward Club, Gate 1';
             document.querySelector('.footer-news').innerHTML ='newsletter';
             document.querySelector('.footer-subscribe').innerHTML ='Subscribe';
+
+            copyrightText.innerHTML = 'All rights reserved to MG Real Estate Egypt ©️ 2021';
+            footerEmail.placeholder = 'email';
 
         }
 
