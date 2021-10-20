@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
 *,
 *::before,
 *::after {
@@ -12,6 +13,9 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth; }
+
+.arabic-font {
+  font-family: 'Cairo', sans-serif !important; }
 
 .arabic-style {
   direction: rtl;
@@ -69,7 +73,7 @@ body {
   padding: 0.5rem;
   border-radius: 100rem; }
 
-.active-lang-blue {
+.sticky .active-lang-blue {
   background-color: #00619c !important;
   color: #fff !important;
   padding: 0.5rem;
@@ -774,6 +778,9 @@ main {
       transition: all ease .3s; }
     .project__btn:hover span {
       margin-right: 1rem; }
+
+.btn-direction {
+  direction: rtl; }
 
 @media only screen and (max-width: 990px) {
   .projects {

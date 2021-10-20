@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -15,6 +17,10 @@ html{
 body{
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+}
+
+.arabic-font{
+    font-family: 'Cairo', sans-serif !important;
 }
 
 
@@ -91,7 +97,7 @@ body{
     border-radius: 100rem;
 }
 
-.active-lang-blue{
+.sticky .active-lang-blue{
     background-color: #00619c !important;
     color: #fff !important;
     padding: 0.5rem;

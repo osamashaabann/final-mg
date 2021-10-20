@@ -187,8 +187,15 @@ class Translate{
             } 
         });
 
+        if (language == "arabic"){
+            if (window.scrollY > 250){
+            document.querySelector("header.sticky .english").classList.remove('active-lang-blue');
+            }
+        } 
 
         if (language == 'arabic'){
+            document.body.classList.add("arabic-font");
+
 
             // LANGUAGE SCRIPT
             if (window.scrollY > 250){
@@ -232,6 +239,9 @@ class Translate{
 
 
         } else if (language == 'english'){
+
+            document.body.classList.remove("arabic-font");
+
 
             // LANGUAGE SCRIPT
             if (window.scrollY > 250){

@@ -241,13 +241,44 @@ class Translate{
             } 
         });
 
+        
+            if (language == "arabic"){
+                if (window.scrollY > 250){
+                document.querySelector("header.sticky .english").classList.remove('active-lang-blue');
+            }
+        }
+
+
+        // PROJECT NAME , DIRECTION and ARROW
+        let projectBrn = document.querySelectorAll('.project-btn');
+        let projectArrow = document.querySelectorAll('.project-arrow');
+
+        
+
+        projectBrn.forEach(i => {
+            if (language == "arabic"){
+                i.classList.add('btn-direction');
+            } else if (language == "english"){
+                i.classList.remove('btn-direction');
+            } 
+        });
+        projectArrow.forEach(i => {
+            if (language == "arabic"){
+                i.innerHTML = '&larr;';
+            } else if (language == "english"){
+                i.innerHTML = '&rarr;';
+            } 
+        });
+
+        
 
         if (language == "arabic"){
 
+            document.body.classList.add("arabic-font");
 
             if (window.scrollY > 250){
-                document.querySelector("header.sticky .arabic").classList.add('active-lang-blue');
                 document.querySelector("header.sticky .english").classList.remove('active-lang-blue');
+                document.querySelector("header.sticky .arabic").classList.add('active-lang-blue');
             } else if (window.scrollY < 250){
                 document.querySelector("main .arabic").classList.add('active-lang-white');
                 document.querySelector("main .english").classList.remove('active-lang-white');
@@ -270,7 +301,7 @@ class Translate{
             document.querySelector('.first-carousel-text-2').innerHTML = 'إلى رفاهية';
             document.querySelector('.first-carousel-text-3').innerHTML = 'الحياة';
 
-            document.querySelector('.second-carousel-text-1').innerHTML = 'MG للعقارات';
+            document.querySelector('.second-carousel-text-1').innerHTML = 'إم جي للتسويق العقاري';
             document.querySelector('.second-carousel-text-2').innerHTML = 'هي وجهتك';
             document.querySelector('.second-carousel-text-3').innerHTML = 'للمصداقية';
 
@@ -300,6 +331,9 @@ class Translate{
         }
 
         else if (language == "english"){
+
+            document.body.classList.remove("arabic-font");
+
 
             if (window.scrollY > 250){
                 document.querySelector(".sticky .arabic").classList.remove('active-lang-blue');
