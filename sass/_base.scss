@@ -15,7 +15,9 @@ html{
 body{
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    z-index: 999999999;
 }
+
 
 .arabic-style{
     direction: rtl;
@@ -43,25 +45,35 @@ body{
     align-items: center;
 }
 
-.test{
-    font-size: 2rem ;
-    font-weight: 100;
-    flex: 1 1 5rem;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.flag{
+    width: 17px;
+    margin-right: 3px;
 }
+
+.langauge-box{
+    font-size: 2rem !important;
+    font-weight: 100 !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: absolute;
+    top: 25px;
+    left: 40%;
+    z-index: 15;
+}
+
+
 
 .lang-btns{
     background-color: transparent;
     border: none;
     outline: none;
-    font-size: 1.8rem;
-    color: #ddd;
+    font-size: 1.6rem;
     transition: all 0.3s ease;
-
+    color: #fff;
     margin: 0 0.7rem;
+    padding: 0.5rem;
     
     display: flex;
     justify-content: center;
@@ -73,6 +85,24 @@ body{
 
 }
 
+.active-lang-white{
+    background-color: #fff !important;
+    color: #00619c !important;
+    padding: 0.5rem;
+    border-radius: 100rem;
+}
+
+.active-lang-blue{
+    background-color: #00619c !important;
+    color: #fff !important;
+    padding: 0.5rem;
+    border-radius: 100rem
+}
+
+
+.sticky .lang-btns{
+    color: #00619c;
+}
 
 
 // Thsi is the Language style
@@ -98,13 +128,27 @@ $bp-x-small: 25em; //400px => 400px/16px
 
 }
 
+@media only screen and (max-width: 600px) {
+    main .langauge-box{
+        top: 25px;
+        left: 30%;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    
+    main .langauge-box{
+        top: 70px;
+        left:2%;
+    }
+    
+}
+
 @media only screen and (max-width: 424px) {
     html{
         font-size: 42%;
     }
-
 }
-
 
 
 

@@ -7,9 +7,10 @@ $(document).ready(function(){
     $(window).on("scroll" , function(){
         let $windowScrolly =  $(window).scrollTop();
         $("body").toggleClass("scroll" , ($windowScrolly > 250));
-    });
+        
 
-    // Carousel
+    });
+   // Carousel
     $('#carouselFade').carousel();
 
     
@@ -82,7 +83,6 @@ $(document).ready(function(){
     let body = $('body');
     let menuTrigger = $('.js-menu-trigger');
     let mainOverlay = $('.js-main-overlay');
-    let close = $('.main-overlay').after();
 
     menuTrigger.on('click', function(){
         body.addClass("menu-active");
@@ -180,3 +180,4 @@ form.addEventListener("submit", (e) => {
 });
 
 inputFields.forEach((input) => input.addEventListener("input", validateInputs));
+

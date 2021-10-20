@@ -1,14 +1,21 @@
 class Translate{
     constructor(){
 
+        let ar = document.querySelectorAll(".arabic");
+        let en = document.querySelectorAll(".english");
 
-        document.querySelector(".arabic").addEventListener("click", () =>{
-            this.translate("arabic");
+        ar.forEach(i => {
+            i.addEventListener('click', ()=>{
+                this.translate("arabic");
+            })
         });
-  
-        document.querySelector(".english").addEventListener("click", () =>{
-            this.translate("english");
-        });
+
+        en.forEach(i => {
+            i.addEventListener('click', ()=>{
+                this.translate("english");
+            })
+        });    
+      
 
         this.translate(localStorage.getItem("language"));
 
@@ -17,6 +24,29 @@ class Translate{
 }
   
     translate(language){
+
+        // Burger
+        let Burger = document.querySelectorAll(".menu-trigger");
+
+        Burger.forEach(i => {
+            if (language == "arabic"){
+                i.classList.add("menu-trigger-arabic");
+            } else if (language == "english"){
+                i.classList.remove("menu-trigger-arabic");
+            } 
+        });
+
+        let ulArabic = document.querySelectorAll("nav.nav-wrapper ul");
+
+        ulArabic.forEach(i => {
+            if (language == "arabic"){
+                i.classList.add("ul-arabic");
+            } else if (language == "english"){
+                i.classList.remove("ul-arabic");
+            } 
+        });
+
+        
 
 
         let callingText = document.querySelector(".calling-text");
@@ -77,11 +107,9 @@ class Translate{
         // The Social Line and Tha Icons 
         if (language == 'arabic'){
                 social.classList.add("social-test");
-                console.log("test is on");
                 
             } else if (language == "english"){
                         social.classList.remove("social-test");
-                    console.log("test is off");
 
             }
         // The Social Line and Tha Icons 
@@ -181,8 +209,33 @@ class Translate{
             } 
         });
 
+        let allArBtns = document.querySelectorAll("main .arabic");
+        let allEnBtns = document.querySelectorAll("main .english");
+
+        allArBtns.forEach(i => {
+            if (language == "arabic"){
+                i.classList.add('active-lang-white');
+            } else if (language == "english"){
+                i.classList.remove('active-lang-white');
+                
+            } 
+        });
+
+        allEnBtns.forEach(i => {
+            if (language == "arabic"){
+                i.classList.remove('active-lang-white');
+            } else if (language == "english"){
+                i.classList.add('active-lang-white');
+                
+            } 
+        });
+
 
         if (language == "arabic"){
+            document.querySelector(".sticky .arabic").classList.add('active-lang-blue');
+
+            document.querySelector(".sticky .english").classList.remove('active-lang-blue');
+
 
             callingText.innerHTML = 'تواصل معنا';
             
@@ -228,6 +281,12 @@ class Translate{
 
         else if (language == "english"){
 
+            document.querySelector(".sticky .arabic").classList.remove('active-lang-blue');
+            document.querySelector("main .arabic").classList.remove('active-lang-white');
+
+            document.querySelector(".sticky .english").classList.add('active-lang-blue');
+            document.querySelector("main .english").classList.add('active-lang-white');
+
             callingText.innerHTML = 'Call Us';
 
 
@@ -270,4 +329,3 @@ class Translate{
   }
   
   onload = new Translate();
-
