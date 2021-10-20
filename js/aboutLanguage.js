@@ -1,13 +1,21 @@
 class Translate{
     constructor(){
-        document.querySelector(".arabic").addEventListener("click", () =>{
-            this.translate("arabic");
+        let ar = document.querySelectorAll(".arabic");
+        let en = document.querySelectorAll(".english");
+
+        ar.forEach(i => {
+            i.addEventListener('click', ()=>{
+                this.translate("arabic");
+            })
         });
-  
-        document.querySelector(".english").addEventListener("click", () =>{
-            this.translate("english");
-        });
-  
+
+        en.forEach(i => {
+            i.addEventListener('click', ()=>{
+                this.translate("english");
+            })
+        });    
+      
+
         this.translate(localStorage.getItem("language"));
 
     }
@@ -56,6 +64,19 @@ class Translate{
 
         let copyrightText = document.querySelector('.copyright-text');
         let footerEmail = document.querySelector(".footer-email");
+
+
+
+        // Burger
+        let Burger = document.querySelectorAll(".menu-trigger");
+
+        Burger.forEach(i => {
+            if (language == "arabic"){
+                i.classList.add("menu-trigger-arabic");
+            } else if (language == "english"){
+                i.classList.remove("menu-trigger-arabic");
+            } 
+        });
 
 
         // NAV BAR
@@ -135,8 +156,59 @@ class Translate{
             } 
         });
 
+        // LANGUAGE SCRIPT
+
+        let langBox = document.querySelectorAll("main .langauge-box");
+        let allArBtns = document.querySelectorAll("main .arabic");
+        let allEnBtns = document.querySelectorAll("main .english");
+        let ulArabic = document.querySelectorAll("nav.nav-wrapper ul");
+
+        ulArabic.forEach(i => {
+            if (language == "arabic"){
+                i.classList.add("ul-arabic");
+            } else if (language == "english"){
+                i.classList.remove("ul-arabic");
+            } 
+        });
+
+        allArBtns.forEach(i => {
+            if (language == "arabic"){
+                i.classList.add('active-lang-white');
+            } else if (language == "english"){
+                i.classList.remove('active-lang-white');
+                
+            } 
+        });
+
+        allEnBtns.forEach(i => {
+            if (language == "arabic"){
+                i.classList.remove('active-lang-white');
+            } else if (language == "english"){
+                i.classList.add('active-lang-white');
+                
+            } 
+        });
+
+        langBox.forEach(i => {
+            if (language == "arabic"){
+                i.classList.remove('langauge-box-en');
+            } else if (language == "english"){
+                i.classList.add('langauge-box-en');                
+            } 
+        });
 
         if (language == 'arabic'){
+            // LANGUAGE SCRIPT
+            if (window.scrollY > 250){
+                document.querySelector("header.sticky .arabic").classList.add('active-lang-blue');
+                document.querySelector("header.sticky .english").classList.remove('active-lang-blue');
+            } else if (window.scrollY < 250){
+                document.querySelector("main .arabic").classList.add('active-lang-white');
+            document.querySelector("main .english").classList.remove('active-lang-white');
+            }
+            // LANGUAGE SCRIPT
+
+
             callingText.innerHTML = 'تواصل معنا';
 
 
@@ -200,6 +272,17 @@ class Translate{
         } 
         
         else if (language == 'english'){
+            // LANGUAGE SCRIPT
+            if (window.scrollY > 250){
+                document.querySelector(".sticky .arabic").classList.remove('active-lang-blue');
+                document.querySelector(".sticky .english").classList.add('active-lang-blue');
+                console.log("en");
+            } else if (window.scrollY < 250){
+                document.querySelector("main .arabic").classList.remove('active-lang-white');
+                document.querySelector("main .english").classList.add('active-lang-white');
+                console.log("ar")
+            }
+            // LANGUAGE SCRIPT
 
             callingText.innerHTML = 'Call Us';
 

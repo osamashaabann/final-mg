@@ -11,8 +11,7 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
-  z-index: 999999999; }
+  scroll-behavior: smooth; }
 
 .arabic-style {
   direction: rtl;
@@ -34,7 +33,7 @@ body {
   align-items: center; }
 
 .flag {
-  width: 17px;
+  width: 1.7rem;
   margin-right: 3px; }
 
 .langauge-box {
@@ -47,13 +46,13 @@ body {
   position: absolute;
   top: 25px;
   left: 40%;
-  z-index: 15; }
+  z-index: 16; }
 
 .lang-btns {
   background-color: transparent;
   border: none;
   outline: none;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   transition: all 0.3s ease;
   color: #fff;
   margin: 0 0.7rem;
@@ -88,11 +87,21 @@ body {
 @media only screen and (max-width: 600px) {
   main .langauge-box {
     top: 25px;
-    left: 30%; } }
-@media only screen and (max-width: 490px) {
+    left: 30%; }
+
+  main .langauge-box-en {
+    top: 25px;
+    right: 30%;
+    left: unset; } }
+@media only screen and (max-width: 560px) {
   main .langauge-box {
-    top: 70px;
-    left: 2%; } }
+    top: 9.7rem;
+    left: 3%; }
+
+  main .langauge-box-en {
+    top: 9.7rem;
+    right: 3%;
+    left: unset; } }
 @media only screen and (max-width: 424px) {
   html {
     font-size: 42%; } }
@@ -126,7 +135,7 @@ header.sticky {
   right: 0;
   background-color: white;
   transform: translateY(-200%);
-  z-index: 15;
+  z-index: 10;
   transition: all 0.2s ease-in-out; }
 
 header.sticky .menu li a {
@@ -145,7 +154,7 @@ body.scroll header.sticky .logo-blue {
   display: block; }
 
 .nav-wrapper {
-  min-height: 10vh;
+  min-height: 13rem;
   padding: 1.5rem;
   position: relative;
   display: flex;
@@ -157,7 +166,7 @@ body.scroll header.sticky .logo-blue {
 
 .logo .logo-blue,
 .logo .logo-white {
-  width: 24.5rem; }
+  width: 20.5rem; }
 
 nav.nav-wrapper ul {
   display: flex;
@@ -349,7 +358,7 @@ nav.nav-wrapper .drop-menu:hover .dropdown {
   .menu-trigger {
     background: url(../img/hamburger-icon.svg) no-repeat center/cover;
     position: absolute;
-    top: 20px;
+    top: 26px;
     right: 20px;
     fill: #fff;
     z-index: 40;
@@ -360,7 +369,7 @@ nav.nav-wrapper .drop-menu:hover .dropdown {
   .menu-trigger-arabic {
     background: url(../img/hamburger-icon.svg) no-repeat center/cover;
     position: absolute;
-    top: 20px;
+    top: 26px;
     left: 20px !important;
     right: unset !important;
     fill: #fff;
@@ -1406,7 +1415,7 @@ footer {
   .about__box {
     z-index: 5; }
   .about__title {
-    font-size: 6rem;
+    font-size: 5.2rem;
     font-weight: bold;
     color: #fff;
     z-index: 5; }

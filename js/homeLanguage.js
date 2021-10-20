@@ -231,11 +231,31 @@ class Translate{
         });
 
 
+        let langBox = document.querySelectorAll("main .langauge-box");
+
+        langBox.forEach(i => {
+            if (language == "arabic"){
+                i.classList.remove('langauge-box-en');
+            } else if (language == "english"){
+                i.classList.add('langauge-box-en');                
+            } 
+        });
+
+
         if (language == "arabic"){
-            document.querySelector(".sticky .arabic").classList.add('active-lang-blue');
 
-            document.querySelector(".sticky .english").classList.remove('active-lang-blue');
 
+            if (window.scrollY > 250){
+                document.querySelector("header.sticky .arabic").classList.add('active-lang-blue');
+                document.querySelector("header.sticky .english").classList.remove('active-lang-blue');
+            } else if (window.scrollY < 250){
+                document.querySelector("main .arabic").classList.add('active-lang-white');
+                document.querySelector("main .english").classList.remove('active-lang-white');
+            }
+            
+
+
+            
 
             callingText.innerHTML = 'تواصل معنا';
             
@@ -281,11 +301,15 @@ class Translate{
 
         else if (language == "english"){
 
-            document.querySelector(".sticky .arabic").classList.remove('active-lang-blue');
-            document.querySelector("main .arabic").classList.remove('active-lang-white');
+            if (window.scrollY > 250){
+                document.querySelector(".sticky .arabic").classList.remove('active-lang-blue');
+                document.querySelector(".sticky .english").classList.add('active-lang-blue');
+            } else if (window.scrollY < 250){
+                document.querySelector("main .arabic").classList.remove('active-lang-white');
+                document.querySelector("main .english").classList.add('active-lang-white');
+            }
 
-            document.querySelector(".sticky .english").classList.add('active-lang-blue');
-            document.querySelector("main .english").classList.add('active-lang-white');
+            
 
             callingText.innerHTML = 'Call Us';
 

@@ -15,7 +15,6 @@ html{
 body{
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    z-index: 999999999;
 }
 
 
@@ -46,7 +45,7 @@ body{
 }
 
 .flag{
-    width: 17px;
+    width: 1.7rem;
     margin-right: 3px;
 }
 
@@ -60,7 +59,7 @@ body{
     position: absolute;
     top: 25px;
     left: 40%;
-    z-index: 15;
+    z-index: 16;
 }
 
 
@@ -69,7 +68,7 @@ body{
     background-color: transparent;
     border: none;
     outline: none;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     transition: all 0.3s ease;
     color: #fff;
     margin: 0 0.7rem;
@@ -133,13 +132,26 @@ $bp-x-small: 25em; //400px => 400px/16px
         top: 25px;
         left: 30%;
     }
+
+    main .langauge-box-en{
+        top: 25px;
+        right: 30%;
+        left: unset;
+    }
+    
 }
 
-@media only screen and (max-width: 490px) {
+@media only screen and (max-width: 560px) {
     
     main .langauge-box{
-        top: 70px;
-        left:2%;
+        top: 9.7rem;
+        left:3%;
+    }
+
+    main .langauge-box-en{
+        top: 9.7rem;
+        right: 3%;
+        left: unset;
     }
     
 }

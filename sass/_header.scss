@@ -34,7 +34,7 @@ header.sticky{
     right: 0;
     background-color: rgba(#fff, 1);
     transform: translateY(-200%);
-    z-index: 15;
+    z-index: 10;
     transition: all 0.2s ease-in-out;
 }
 
@@ -61,7 +61,7 @@ body.scroll header.sticky .logo-blue{
 }
 
 .nav-wrapper{
-    min-height: 10vh;
+    min-height: 13rem;
     padding: 1.5rem;
     position: relative;
     display: flex;
@@ -75,7 +75,7 @@ body.scroll header.sticky .logo-blue{
 
 .logo .logo-blue,
 .logo .logo-white{
-    width: 24.5rem;
+    width: 20.5rem;
 }
 
 nav.nav-wrapper ul{
@@ -337,7 +337,7 @@ nav.nav-wrapper .drop-menu:hover .dropdown {
     .menu-trigger{
         background: url(../img/hamburger-icon.svg) no-repeat center / cover;
         position: absolute;
-        top: 20px;
+        top: 26px;
         right: 20px;
         fill: #fff;
         z-index: 40;
@@ -348,7 +348,7 @@ nav.nav-wrapper .drop-menu:hover .dropdown {
     .menu-trigger-arabic{
         background: url(../img/hamburger-icon.svg) no-repeat center / cover;
         position: absolute;
-        top: 20px;
+        top: 26px;
         left: 20px !important;
         right: unset !important;
         fill: #fff;
